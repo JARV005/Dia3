@@ -1,0 +1,18 @@
+def calcular_promedio_estudiante(lista_notas):
+    if not lista_notas:
+        return 0.0
+    return sum(lista_notas) / len(lista_notas)
+
+notas_estudiantes = {
+    "Estudiante1": [8.5, 9.2, 7.8],
+    "Estudiante2": [9.1, 8.7, 9.5],
+    "Estudiante3": [7.5, 8.0, 8.8]
+}
+
+promedios = {}
+for estudiante, notas in notas_estudiantes.items():
+    promedio = calcular_promedio_estudiante(notas)
+    promedios[estudiante] = round(promedio, 2)
+
+for estudiante, promedio in promedios.items():
+    print(f"{estudiante}: {promedio}")
